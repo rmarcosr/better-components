@@ -1,0 +1,42 @@
+@if (tableData === undefined || tableData === null) {
+<div class="table-container">
+    <table>
+        <thead>
+            <tr class="no-data"> &#8203; </tr>
+        </thead>
+        <tbody>
+            <h3 class="no-data">No hay datos disponibles</h3>
+            <p class="no-data">Intenta cargar información para mostrarla aquí.</p>
+        </tbody>
+    </table>
+</div>
+
+} @else {
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th [colSpan]="tableData.rowData.length+1" class="search-container">
+                    <input type="text" placeholder="Buscar..." [(ngModel)]="searchItem" (input)="onSearch(searchItem)"
+                        class="table-search-input" />
+                </th>
+            </tr>
+            <tr>
+                @for (col of tableData.colsName; track $index) {
+                <th>{{ col[1] }}</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @for (row of filteredRows; track $index) {
+            <tr (click)="onRowClick(row)">
+                @for (col of tableData.colsName; track $index) {
+                <td>{{ row[col[0]] }}</td>
+                }
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}
