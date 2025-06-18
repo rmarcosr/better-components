@@ -9,6 +9,17 @@ The library is distributed under the **MIT license** and is compatible with **An
 You can install the package via npm:
 
 ```bash
-npm install better-components
+npm install @marcosrodriguez/better-components
 ```
+
+## Import
+If the installation is successful, import on your component.
+
+```ts
+import { } from "@marcosrodriguez/better-components";
+```
+All types and components are prefixed with BC for consistency.
+
+
+
 
