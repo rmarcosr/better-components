@@ -10,6 +10,11 @@ export * from './lib/alerts/simple-alert/simple-alert.component';
 export * from './lib/tables/simple-table/simple-table.component';
 export * from './lib/tables/table/table.component';
 
+/** Icons components */
+export * from './lib/icons/icon-helper/icon-helper.component'
+export * from './lib/icons/icon-warning/icon-warning.component'
+
+
 /** Interfaces */
 export * from './lib/types/table-data'
 
