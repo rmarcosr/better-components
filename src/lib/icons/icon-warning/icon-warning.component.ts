@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './icon-warning.component.html',
   styleUrl: './icon-warning.component.css'
 })
-export class IconWarningComponent {
+export class BCIconWarningComponent {
 
   @Input() message = "Default Message";
 

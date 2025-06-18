@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
  * A simple alert with a title, message, and a close button.
  */
 @Component({
-  selector: 'BCSimpleAlert',
+  selector: 'bc-simple-alert',
   standalone: true,
   imports: [],
   templateUrl: './simple-alert.component.html',

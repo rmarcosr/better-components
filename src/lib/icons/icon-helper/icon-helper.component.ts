@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './icon-helper.component.html',
   styleUrl: './icon-helper.component.css'
 })
-export class IconHelperComponent {
+export class BCIconHelperComponent {
 
   @Input() message = "Default Message";
 
