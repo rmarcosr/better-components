@@ -29,7 +29,7 @@ export class BCTableComponent {
   searchItem: string = '';
 
   /** All rows that match the search. */
-  filteredRows: unknown[] = [];
+  filteredRows: any[] = [];
 
   /** Initializes the filtered rows with the full dataset. */
   ngOnInit(): void {

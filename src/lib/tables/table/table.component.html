@@ -32,7 +32,14 @@
             @for (row of filteredRows; track $index) {
             <tr (click)="onRowClick(row)">
                 @for (col of tableData.colsName; track $index) {
+                @if (row[col[0]] === true) {
+                <td>&#10003;</td>
+                }
+                @else if (row[col[0]] == false) {
+                <td>&#10005;</td>
+                } @else {
                 <td>{{ row[col[0]] }}</td>
+                }
                 }
             </tr>
             }
