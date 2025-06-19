@@ -23,13 +23,13 @@ export class BCTableComponent {
   @Input() tableData?: BCTableData;
 
   /** Emits the selected row object when a user clicks on a row. */
-  @Output() rowClicked = new EventEmitter<any>();
+  @Output() rowClicked = new EventEmitter<unknown>();
 
   /** The current search term used for filtering rows. */
   searchItem: string = '';
 
   /** All rows that match the search. */
-  filteredRows: any[] = [];
+  filteredRows: unknown[] = [];
 
   /** Initializes the filtered rows with the full dataset. */
   ngOnInit(): void {
@@ -52,7 +52,7 @@ export class BCTableComponent {
   }
 
   /** Emits the clicked row through the output event. */
-  onRowClick(row: any): void {
+  onRowClick(row: unknown): void {
     this.rowClicked.emit(row);
   }
 

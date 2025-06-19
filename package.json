@@ -1,6 +1,6 @@
 {
   "name": "@marcosrodriguez/better-components",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "peerDependencies": {
     "@angular/common": "^18.2.0",
     "@angular/core": "^18.2.0"
@@ -8,5 +8,11 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "eslint": "^9.29.0",
+    "globals": "^16.2.0",
+    "typescript-eslint": "^8.34.1"
+  }
 }

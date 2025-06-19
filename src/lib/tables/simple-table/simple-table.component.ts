@@ -22,10 +22,10 @@ export class BCSimpleTableComponent {
   @Input() tableData?: BCTableData;
 
   /** Emits the selected row object when a user clicks on a row. */
-  @Output() rowClicked = new EventEmitter<any>();
+  @Output() rowClicked = new EventEmitter<unknown>();
 
   /** Emits the clicked row through the output event. */
-  onRowClick(row: any): void {
+  onRowClick(row: unknown): void {
     this.rowClicked.emit(row)
   }
 
