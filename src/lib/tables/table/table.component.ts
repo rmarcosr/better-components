@@ -23,12 +23,14 @@ export class BCTableComponent {
   @Input() tableData?: BCTableData;
 
   /** Emits the selected row object when a user clicks on a row. */
-  @Output() rowClicked = new EventEmitter<unknown>();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  @Output() rowClicked = new EventEmitter<any>();
 
   /** The current search term used for filtering rows. */
   searchItem: string = '';
 
   /** All rows that match the search. */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   filteredRows: any[] = [];
 
   /** Initializes the filtered rows with the full dataset. */
@@ -52,7 +54,7 @@ export class BCTableComponent {
   }
 
   /** Emits the clicked row through the output event. */
-  onRowClick(row: unknown): void {
+  onRowClick(row: any): void {
     this.rowClicked.emit(row);
   }
 
