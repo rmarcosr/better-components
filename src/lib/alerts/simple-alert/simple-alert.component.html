@@ -1,3 +1,4 @@
+@if (!dark) {
 <div class="dialog-overlay">
     <div class="dialog-box">
         <h1 class="dialog-title">{{title}}</h1>
@@ -9,3 +10,16 @@
         </div>
     </div>
 </div>
+} @else {
+<div class="dialog-overlay">
+    <div class="dialog-box-dark">
+        <h1 class="dialog-title-dark">{{title}}</h1>
+        <div class="dialog-content-dark">
+            <p id="dialog-message">{{message}}</p>
+        </div>
+        <div class="dialog-actions">
+            <button class="btn-primary" (click)="action()">{{buttonText}}</button>
+        </div>
+    </div>
+</div>
+}

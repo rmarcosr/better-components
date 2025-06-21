@@ -1,3 +1,4 @@
+/* General Styles */
 .dialog-overlay {
     position: fixed;
     top: 0;
@@ -9,24 +10,6 @@
     align-items: center;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.dialog-box {
-    background-color: #fff;
-    border-radius: 8px;
-    width: 400px;
-    max-width: 90%;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.dialog-title {
-    margin-top: 0;
-
-}
-
-.dialog-content {
-    margin: 15px 0;
 }
 
 .dialog-actions {
@@ -60,4 +43,42 @@
 
 .btn-secondary:hover {
     background-color: #b30000;
+}
+
+/* Styles on default mode */
+.dialog-box {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-title {
+    margin-top: 0;
+}
+
+.dialog-content {
+    margin: 15px 0;
+}
+
+/* Styles on default mode */
+.dialog-box-dark {
+    background-color: #121212;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-title-dark {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.dialog-content-dark {
+    margin: 15px 0;
+    color: #ffffff;
 }

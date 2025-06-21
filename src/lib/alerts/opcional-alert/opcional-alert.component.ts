@@ -22,10 +22,13 @@ export class BCOpcionalAlertComponent {
   @Input() title: string = "Alert Title";
 
   /** Text for the first action button. */
-  @Input() firstButton: string = 'Option 1';
+  @Input() firstButton: string = "Option 1";
 
   /** Text for the second action button. */
-  @Input() secondButton: string = 'Option 2';
+  @Input() secondButton: string = "Option 2";
+
+  /** Indicate if use alternative style on dark mode */
+  @Input() dark: boolean = false;
 
   /** Emits when the first button is clicked. */
   @Output() firstEvent = new EventEmitter<void>();
