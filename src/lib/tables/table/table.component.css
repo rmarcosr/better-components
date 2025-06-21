@@ -1,4 +1,8 @@
-/* Styles BCSimpleAlert Component */
+/* General styles */
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+}
 
 table {
     width: 80%;
@@ -6,13 +10,33 @@ table {
     border-collapse: separate;
     border-spacing: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid #d1d1d1;
     border-radius: 6px;
     overflow: hidden;
-    text-align: left;
+    text-align: center;
+    min-width: 600px;
+}
+
+.search-container {
+    width: 100%;
+    margin: 0px auto 10px;
+    text-align: right;
+}
+
+.search-container input {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    width: 220px;
+    box-shadow: none;
+    background-color: #fff;
+}
+
+/* Default Styles */
+table {
+    border: 1px solid #d1d1d1;
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    text-align: center;
 }
 
 thead {
@@ -45,33 +69,6 @@ tbody tr:hover {
     transition: background-color 0.1s ease-in-out;
 }
 
-.table-container {
-    overflow-x: auto;
-    width: 100%;
-}
-
-table {
-    min-width: 600px;
-}
-
-.search-container {
-    width: 100%;
-    margin: 0px auto 10px;
-    text-align: right;
-}
-
-.search-container input {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    border: 1px solid #d1d1d1;
-    border-radius: 4px;
-    width: 220px;
-    box-shadow: none;
-    background-color: #fff;
-}
-
-/* Style when the table doesn't have content */
-
 tr.no-data {
     height: 50px;
     background-color: #000000;
@@ -84,7 +81,6 @@ h3.no-data {
     text-align: center;
     padding: 12px;
     margin: 0;
-
 }
 
 p.no-data {
@@ -92,6 +88,67 @@ p.no-data {
     font-style: italic;
     font-weight: 400;
     color: #666;
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+}
+
+/* Dark mode styles */
+.table-dark {
+    border: 1px solid #3a3a3a;
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.06);
+}
+
+.thead-dark {
+    background-color: #121212;
+    border-bottom: 1px solid #2d2d2d;
+}
+
+.thead-dark th {
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.tbody-dark td {
+    padding: 14px 18px;
+    font-size: 0.92rem;
+    color: #dddddd;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.tbody-dark tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+.tbody-dark tr:hover {
+    background-color: #3b3b3b;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.tr-no-data-dark {
+    height: 50px;
+    background-color: #121212;
+}
+
+h3.no-data-dark {
+    font-size: 1.95rem;
+    font-weight: 400;
+    color: #dddddd;
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+}
+
+p.no-data-dark {
+    font-size: 0.95rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #999999;
     text-align: center;
     padding: 12px;
     margin: 0;

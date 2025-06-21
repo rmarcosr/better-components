@@ -27,11 +27,14 @@ export class BCTableComponent {
   @Output() rowClicked = new EventEmitter<any>();
 
   /** The current search term used for filtering rows. */
-  searchItem: string = '';
+  searchItem: string = "";
 
   /** All rows that match the search. */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   filteredRows: any[] = [];
+
+  /** Indicate if use alternative style on dark mode */
+  @Input() dark: boolean = false;
 
   /** Initializes the filtered rows with the full dataset. */
   ngOnInit(): void {
@@ -54,6 +57,7 @@ export class BCTableComponent {
   }
 
   /** Emits the clicked row through the output event. */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onRowClick(row: any): void {
     this.rowClicked.emit(row);
   }

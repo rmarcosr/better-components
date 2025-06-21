@@ -25,7 +25,11 @@ export class BCSimpleTableComponent {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   @Output() rowClicked = new EventEmitter<any>();
 
+  /** Indicate if use alternative style on dark mode */
+  @Input() dark: boolean = false;
+
   /** Emits the clicked row through the output event. */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onRowClick(row: any): void {
     this.rowClicked.emit(row)
   }
