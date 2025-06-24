@@ -1,0 +1,19 @@
+@if (!dark) {
+<div class="card">
+    <img class="card-img" [src]="src">
+    <h2 class="card-title">{{title}}</h2>
+
+    <p class="card-subtitle">{{text}}</p>
+
+</div>
+
+} @else {
+<div class="card-dark">
+    <img class="card-img-dark" [src]="src">
+    <h2 class="card-title-dark">{{title}}</h2>
+
+    <p class="card-subtitle-dark">{{text}}</p>
+
+</div>
+
+}
