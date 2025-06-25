@@ -1,0 +1,21 @@
+<div class="timeline">
+    @for (timeline of timelineData; track $index) {
+    @if ($index % 2 == 0) {
+    <div class="container left">
+        <div class="content">
+            <h2 class="title-content">{{timeline.title}}</h2>
+            <p class="title-content">{{timeline.subtitle}}</p>
+            <p>{{timeline.description}}</p>
+        </div>
+    </div>
+    } @else {
+    <div class="container right">
+        <div class="content">
+            <h2 class="title-content">{{timeline.title}}</h2>
+            <p class="title-content">{{timeline.subtitle}}</p>
+            <p>{{timeline.description}}</p>
+        </div>
+    </div>
+    }
+    }
+</div>
