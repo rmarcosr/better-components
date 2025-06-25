@@ -1,35 +1,30 @@
-@switch (dark) {
-@case (false) {
-@if (tableData === null || tableData === undefined) {
 <div class="table-container">
-    <table>
+    @if (tableData === null || tableData === undefined) {
+    <table [class.dark]="dark">
         <thead>
-            <tr class="no-data"> &#8203; </tr>
+            <tr [class.no-data]="!dark" [class.tr-no-data-dark]="dark">&#8203;</tr>
         </thead>
         <tbody>
-            <h3 class="no-data">Not found Data</h3>
-            <p class="no-data">try to load data here</p>
+            <h3 [class.no-data]="!dark" [class.no-data-dark]="dark">Not found Data</h3>
+            <p [class.no-data]="!dark" [class.no-data-dark]="dark">try to load data here</p>
         </tbody>
     </table>
-</div>
-} @else {
-<div class="table-container">
-    <table>
-        <thead>
+    } @else {
+    <table [class.dark]="dark">
+        <thead [class.thead-dark]="dark">
             <tr>
                 @for (col of tableData.colsName; track $index) {
                 <th>{{ col[1] }}</th>
                 }
             </tr>
         </thead>
-        <tbody>
+        <tbody [class.tbody-dark]="dark">
             @for (row of tableData.rowData; track $index) {
             <tr (click)="onRowClick(row)">
                 @for (col of tableData.colsName; track $index) {
                 @if (row[col[0]] === true) {
                 <td>&#10003;</td>
-                }
-                @else if (row[col[0]] == false) {
+                } @else if (row[col[0]] === false) {
                 <td>&#10005;</td>
                 } @else {
                 <td>{{ row[col[0]] }}</td>
@@ -39,52 +34,5 @@
             }
         </tbody>
     </table>
+    }
 </div>
-}
-}
-
-@case (true) {
-@if (tableData === null || tableData === undefined) {
-<div class="table-container">
-    <table class="table-dark">
-        <thead class="thead-dark">
-            <tr class="tr-no-data-dark"> &#8203; </tr>
-        </thead>
-        <tbody>
-            <h3 class="no-data-dark">Not found Data</h3>
-            <p class="no-data-dark">try to load data here</p>
-        </tbody>
-    </table>
-</div>
-} @else {
-<div class="table-container">
-    <table class="table-dark">
-        <thead class="thead-dark">
-            <tr>
-                @for (col of tableData.colsName; track $index) {
-                <th>{{ col[1] }}</th>
-                }
-            </tr>
-        </thead>
-        <tbody class="tbody-dark">
-            @for (row of tableData.rowData; track $index) {
-            <tr (click)="onRowClick(row)">
-                @for (col of tableData.colsName; track $index) {
-                @if (row[col[0]] === true) {
-                <td>&#10003;</td>
-                }
-                @else if (row[col[0]] == false) {
-                <td>&#10005;</td>
-                } @else {
-                <td>{{ row[col[0]] }}</td>
-                }
-                }
-            </tr>
-            }
-        </tbody>
-    </table>
-</div>
-}
-}
-
-}
