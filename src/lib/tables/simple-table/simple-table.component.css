@@ -1,5 +1,3 @@
-/* General styles */
-
 .table-container {
     overflow-x: auto;
     width: 100%;
@@ -7,35 +5,12 @@
 
 table {
     min-width: 600px;
+    width: 80%;
+    margin: 40px auto;
     border-collapse: separate;
     border-spacing: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-}
-
-thead th,
-tbody td {
-    padding: 14px 18px;
-    font-size: 0.92rem;
-}
-
-tbody tr:hover {
-    transition: background-color 0.1s ease-in-out;
-}
-
-h3.no-data,
-p.no-data {
-    text-align: center;
-    padding: 12px;
-    margin: 0;
-}
-
-
-/* Default styles */
-
-table {
-    width: 80%;
-    margin: 40px auto;
     border: 1px solid #d1d1d1;
     border-radius: 6px;
     background-color: #ffffff;
@@ -48,6 +23,7 @@ thead {
 }
 
 thead th {
+    padding: 14px 18px;
     font-size: 0.95rem;
     font-weight: 600;
     color: #ffffff;
@@ -55,6 +31,8 @@ thead th {
 }
 
 tbody td {
+    padding: 14px 18px;
+    font-size: 0.92rem;
     color: #444;
     border-bottom: 1px solid #e4e4e4;
 }
@@ -65,6 +43,7 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
     background-color: #c8c8c8;
+    transition: background-color 0.1s ease-in-out;
 }
 
 tr.no-data {
@@ -72,7 +51,11 @@ tr.no-data {
     background-color: #000000;
 }
 
-h3.no-data {
+h3.no-data,
+p.no-data {
+    text-align: center;
+    padding: 12px;
+    margin: 0;
     font-size: 1.95rem;
     font-weight: 400;
     color: #2f2f2f;
@@ -86,47 +69,44 @@ p.no-data {
 }
 
 
-/* Styles on dark mode */
-.table-dark {
-    width: 80%;
-    margin: 40px auto;
+table.dark {
     border: 1px solid #3a3a3a;
-    border-radius: 6px;
     background-color: #1e1e1e;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.thead-dark {
+thead.thead-dark {
     background-color: #2b2b2b;
     border-bottom: 1px solid #444;
 }
 
-.thead-dark th {
-    font-size: 0.95rem;
-    font-weight: 600;
+thead.thead-dark th {
     color: #f0f0f0;
-    letter-spacing: 0.5px;
 }
 
-.tbody-dark td {
+tbody.tbody-dark td {
     color: #dcdcdc;
     border-bottom: 1px solid #333;
 }
 
-.tbody-dark tr:nth-child(even) {
+tbody.tbody-dark tr:nth-child(even) {
     background-color: #2a2a2a;
 }
 
-.tbody-dark tr:hover {
+tbody.tbody-dark tr:hover {
     background-color: #3a3a3a;
 }
 
-.tr-no-data-dark {
+tr.tr-no-data-dark {
     height: 50px;
     background-color: #2b2b2b;
 }
 
-h3.no-data-dark {
+h3.no-data-dark,
+p.no-data-dark {
+    text-align: center;
+    padding: 12px;
+    margin: 0;
     font-size: 1.95rem;
     font-weight: 400;
     color: #dcdcdc;
