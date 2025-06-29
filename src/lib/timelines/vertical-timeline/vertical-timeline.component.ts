@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TimelineData } from '../../types/timeline-data';
+import { BCTimelineData } from '../../types/timeline-data';
 
 @Component({
   selector: 'bc-vertical-timeline',
@@ -11,5 +11,5 @@ import { TimelineData } from '../../types/timeline-data';
 export class BCVerticalTimelineComponent {
 
   /** Indicate the items to show in the time line */
-  @Input() timelineData: TimelineData[] = []
+  @Input() timelineData: BCTimelineData[] = []
 }
