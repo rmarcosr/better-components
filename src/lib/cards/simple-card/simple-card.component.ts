@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './simple-card.component.html',
-  styleUrl: './simple-card.component.css'
+  styleUrls: ['../../styles/common-styles.css', './simple-card.component.css']
 })
 export class BCSimpleCardComponent {
 
