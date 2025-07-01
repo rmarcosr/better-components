@@ -11,7 +11,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './opcional-alert.component.html',
-  styleUrl: './opcional-alert.component.css'
+  styleUrls: ['../../styles/common-styles.css', './opcional-alert.component.css']
 })
 export class BCOpcionalAlertComponent {
 

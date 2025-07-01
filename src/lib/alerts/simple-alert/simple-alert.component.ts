@@ -10,7 +10,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './simple-alert.component.html',
-  styleUrl: './simple-alert.component.css'
+  styleUrls: ['../../styles/common-styles.css', './simple-alert.component.css']
 })
 export class BCSimpleAlertComponent {
 
