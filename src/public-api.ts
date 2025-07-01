@@ -23,4 +23,5 @@ export * from './lib/timelines/vertical-timeline/vertical-timeline.component'
 
 /** Interfaces */
 export * from './lib/types/table-data'
+export * from './lib/types/timeline-data'
 
